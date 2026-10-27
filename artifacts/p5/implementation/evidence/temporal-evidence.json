@@ -1,0 +1,3003 @@
+[
+  {
+    "sequence": "MO01-structural",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO01-structural-t000.png",
+    "animations": [
+      {
+        "currentTime": 116.58300001996946,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO01-structural",
+    "label": "t090",
+    "delayMs": 90,
+    "file": "motion/MO01-structural-t090.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO01-structural",
+    "label": "t280",
+    "delayMs": 190,
+    "file": "motion/MO01-structural-t280.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO02-search",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO02-search-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.69999999999999,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 180,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO02-search",
+    "label": "t090",
+    "delayMs": 90,
+    "file": "motion/MO02-search-t090.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 180,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 180,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO02-search",
+    "label": "t220",
+    "delayMs": 130,
+    "file": "motion/MO02-search-t220.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 180,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 180,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO04-sheet",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO04-sheet-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 83.28700000699607,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 83.28700000699607,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO04-sheet",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO04-sheet-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 299.9870000069961,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO04-sheet",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO04-sheet-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 300,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO03-row-detail",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO03-row-detail-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO03-row-detail",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO03-row-detail-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 116.66399999296661,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO03-row-detail",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO03-row-detail-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO03-row-detail",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO03-row-detail-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO05-form-focus",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO05-form-focus-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO05-form-focus",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO05-form-focus-t000.png",
+    "animations": [
+      {
+        "currentTime": 66.73100001011045,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 80,
+          "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO05-form-focus",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO05-form-focus-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO05-form-focus",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO05-form-focus-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO06-conditional-reflow",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO06-conditional-reflow-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO06-conditional-reflow",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO06-conditional-reflow-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.64399999650195,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO06-conditional-reflow",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO06-conditional-reflow-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO06-conditional-reflow",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO06-conditional-reflow-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO07-impact-review",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO07-impact-review-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO07-impact-review",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO07-impact-review-t000.png",
+    "animations": []
+  },
+  {
+    "sequence": "MO07-impact-review",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO07-impact-review-t120.png",
+    "animations": []
+  },
+  {
+    "sequence": "MO07-impact-review",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO07-impact-review-t300.png",
+    "animations": []
+  },
+  {
+    "sequence": "MO08-program-reorder",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO08-program-reorder-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO08-program-reorder",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO08-program-reorder-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO08-program-reorder",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO08-program-reorder-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO08-program-reorder",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO08-program-reorder-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO09-temporal-selection",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO09-temporal-selection-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO09-temporal-selection",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO09-temporal-selection-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO09-temporal-selection",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO09-temporal-selection-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO09-temporal-selection",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO09-temporal-selection-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO10-confirm-real-state",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO10-confirm-real-state-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO10-confirm-real-state",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO10-confirm-real-state-t000.png",
+    "animations": [
+      {
+        "currentTime": 66.68199997646728,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 80,
+          "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.68199997646728,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO10-confirm-real-state",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO10-confirm-real-state-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO10-confirm-real-state",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO10-confirm-real-state-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO11-media-preview",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO11-media-preview-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO11-media-preview",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO11-media-preview-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.66499999333175,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO11-media-preview",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO11-media-preview-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO11-media-preview",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO11-media-preview-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO12-segment-indicator",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO12-segment-indicator-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO12-segment-indicator",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO12-segment-indicator-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO12-segment-indicator",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO12-segment-indicator-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO12-segment-indicator",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO12-segment-indicator-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO13-cross-domain",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO13-cross-domain-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO13-cross-domain",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO13-cross-domain-t000.png",
+    "animations": [
+      {
+        "currentTime": 66.62799997790714,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 270,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO13-cross-domain",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO13-cross-domain-t120.png",
+    "animations": [
+      {
+        "currentTime": 266.6279999779072,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 270,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO13-cross-domain",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO13-cross-domain-t300.png",
+    "animations": [
+      {
+        "currentTime": 270,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 270,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO14-course-status",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO14-course-status-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO14-course-status",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO14-course-status-t000.png",
+    "animations": [
+      {
+        "currentTime": 66.67500000060534,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 80,
+          "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.67500000060534,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 80,
+          "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.67500000060534,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO14-course-status",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO14-course-status-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO14-course-status",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO14-course-status-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO15-conflict-expand",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO15-conflict-expand-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO15-conflict-expand",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO15-conflict-expand-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO15-conflict-expand",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO15-conflict-expand-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO15-conflict-expand",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO15-conflict-expand-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO16-client-merge",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO16-client-merge-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO16-client-merge",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO16-client-merge-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.60900000915859,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.60900000915859,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO16-client-merge",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO16-client-merge-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 266.7090000091587,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO16-client-merge",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO16-client-merge-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO17-draft-publish",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO17-draft-publish-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO17-draft-publish",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO17-draft-publish-t000.png",
+    "animations": [
+      {
+        "currentTime": 66.65900002643465,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 80,
+          "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.65900002643465,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO17-draft-publish",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO17-draft-publish-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO17-draft-publish",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO17-draft-publish-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO18-promotion-state",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO18-promotion-state-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO18-promotion-state",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO18-promotion-state-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.69599998154119,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO18-promotion-state",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO18-promotion-state-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO18-promotion-state",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO18-promotion-state-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO19-schedule-interval",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO19-schedule-interval-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO19-schedule-interval",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO19-schedule-interval-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO19-schedule-interval",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO19-schedule-interval-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO19-schedule-interval",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO19-schedule-interval-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO20-attendance-list",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO20-attendance-list-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO20-attendance-list",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO20-attendance-list-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO20-attendance-list",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO20-attendance-list-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO20-attendance-list",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO20-attendance-list-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO21-capability-diff",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO21-capability-diff-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO21-capability-diff",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO21-capability-diff-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.60400000768718,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO21-capability-diff",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO21-capability-diff-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 266.60400000768715,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO21-capability-diff",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO21-capability-diff-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO22-alert-read",
+    "label": "before",
+    "delayMs": 0,
+    "file": "motion/MO22-alert-read-before.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO22-alert-read",
+    "label": "t000",
+    "delayMs": 0,
+    "file": "motion/MO22-alert-read-t000.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.61099999994036,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 66.61099999994036,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO22-alert-read",
+    "label": "t120",
+    "delayMs": 120,
+    "file": "motion/MO22-alert-read-t120.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 266.71099999994044,
+        "playState": "running",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "sequence": "MO22-alert-read",
+    "label": "t300",
+    "delayMs": 180,
+    "file": "motion/MO22-alert-read-t300.png",
+    "animations": [
+      {
+        "currentTime": 260,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 260,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 320,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 320,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "currentTime": 200,
+        "playState": "finished",
+        "effect": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 200,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  }
+]

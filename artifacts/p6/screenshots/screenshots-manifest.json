@@ -1,0 +1,240 @@
+[
+  {
+    "file": "summary-normal.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "normal",
+      "SIM-01"
+    ]
+  },
+  {
+    "file": "summary-8-of-12.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "journey",
+      "R03"
+    ]
+  },
+  {
+    "file": "summary-zero-collected.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=no-payments",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "empty-money",
+      "J6-27"
+    ]
+  },
+  {
+    "file": "summary-mixed-payment.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=mixed-payment",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "mixed-payment",
+      "J6-03"
+    ]
+  },
+  {
+    "file": "summary-no-appointments.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=no-appointments",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "empty-agenda",
+      "J6-26"
+    ]
+  },
+  {
+    "file": "summary-day-finished.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=all-finished",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "all-finished"
+    ]
+  },
+  {
+    "file": "summary-one-incident.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=one-incident",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "one-incident"
+    ]
+  },
+  {
+    "file": "summary-many-incidents.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "many-incidents"
+    ]
+  },
+  {
+    "file": "summary-grouped-incidents.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "grouped",
+      "AT"
+    ]
+  },
+  {
+    "file": "summary-critical-stock.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "AT-05",
+      "AT-06"
+    ]
+  },
+  {
+    "file": "summary-overdue-obligations.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "AT-12"
+    ]
+  },
+  {
+    "file": "summary-partial-source.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=partial",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "partial",
+      "J6-28"
+    ]
+  },
+  {
+    "file": "summary-no-incidents.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=no-incidents",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "empty-attention",
+      "J6-25"
+    ]
+  },
+  {
+    "file": "summary-owner-multirole.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "multi-role",
+      "J6-31"
+    ]
+  },
+  {
+    "file": "summary-restricted.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=restricted",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "permissions",
+      "J6-30"
+    ]
+  },
+  {
+    "file": "summary-stale.png",
+    "viewport": "390x844",
+    "query": "?summaryScenario=stale",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "stale"
+    ]
+  },
+  {
+    "file": "summary-viewport-320.png",
+    "viewport": "320x700",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "responsive",
+      "ST-19"
+    ]
+  },
+  {
+    "file": "summary-viewport-430.png",
+    "viewport": "430x932",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "responsive",
+      "ST-19"
+    ]
+  },
+  {
+    "file": "summary-reduced-motion.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "reduce",
+    "tags": [
+      "reduced-motion",
+      "ST-20"
+    ]
+  },
+  {
+    "file": "handoff-finance.png",
+    "viewport": "390x844",
+    "query": "?financeSurface=F09&period=hoy&movementKind=ingreso&ownership=propia&returnRoot=resumen&businessDate=2026-10-24&returnScroll=0",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "handoff",
+      "finance",
+      "J6-02"
+    ]
+  },
+  {
+    "file": "return-from-finance.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "return",
+      "ST-13"
+    ]
+  },
+  {
+    "file": "handoff-agenda.png",
+    "viewport": "390x844",
+    "query": "?agendaDate=2026-10-24&agendaStates=confirmado&returnRoot=resumen&businessDate=2026-10-24&returnScroll=0",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "handoff",
+      "agenda",
+      "J6-13"
+    ]
+  },
+  {
+    "file": "handoff-inventory.png",
+    "viewport": "390x844",
+    "query": "?inventorySurface=I8&articleId=ART-CERA&inventoryUsage=sale&returnRoot=resumen&businessDate=2026-10-24&returnScroll=647",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "handoff",
+      "inventory",
+      "J6-14"
+    ]
+  },
+  {
+    "file": "return-from-inventory.png",
+    "viewport": "390x844",
+    "query": "",
+    "reducedMotion": "no-preference",
+    "tags": [
+      "return",
+      "J6-29"
+    ]
+  }
+]

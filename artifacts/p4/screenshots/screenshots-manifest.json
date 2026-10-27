@@ -1,0 +1,665 @@
+[
+  {
+    "file": "F01-baseline.png",
+    "surfaces": [
+      "F01"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F02-baseline.png",
+    "surfaces": [
+      "F02"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F03-baseline.png",
+    "surfaces": [
+      "F03"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F04-baseline.png",
+    "surfaces": [
+      "F04"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F05-baseline.png",
+    "surfaces": [
+      "F05"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F06-baseline.png",
+    "surfaces": [
+      "F06"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F07-baseline.png",
+    "surfaces": [
+      "F07"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F08-baseline.png",
+    "surfaces": [
+      "F08"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F09-baseline.png",
+    "surfaces": [
+      "F09"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F10-baseline.png",
+    "surfaces": [
+      "F10"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F11-baseline.png",
+    "surfaces": [
+      "F11"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F12-baseline.png",
+    "surfaces": [
+      "F12"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F13-baseline.png",
+    "surfaces": [
+      "F13"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F14-baseline.png",
+    "surfaces": [
+      "F14"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F15-baseline.png",
+    "surfaces": [
+      "F15"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F16-baseline.png",
+    "surfaces": [
+      "F16"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F17-baseline.png",
+    "surfaces": [
+      "F17"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F18-baseline.png",
+    "surfaces": [
+      "F18"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F19-baseline.png",
+    "surfaces": [
+      "F19"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F20-baseline.png",
+    "surfaces": [
+      "F20"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F21-baseline.png",
+    "surfaces": [
+      "F21"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F22-baseline.png",
+    "surfaces": [
+      "F22"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F23-baseline.png",
+    "surfaces": [
+      "F23"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F24-baseline.png",
+    "surfaces": [
+      "F24"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F25-baseline.png",
+    "surfaces": [
+      "F25"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F26-baseline.png",
+    "surfaces": [
+      "F26"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F27-baseline.png",
+    "surfaces": [
+      "F27"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F28-baseline.png",
+    "surfaces": [
+      "F28"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F29-baseline.png",
+    "surfaces": [
+      "F29"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F30-baseline.png",
+    "surfaces": [
+      "F30"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F31-baseline.png",
+    "surfaces": [
+      "F31"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F32-baseline.png",
+    "surfaces": [
+      "F32"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F33-baseline.png",
+    "surfaces": [
+      "F33"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F34-baseline.png",
+    "surfaces": [
+      "F34"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F35-baseline.png",
+    "surfaces": [
+      "F35"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F36-baseline.png",
+    "surfaces": [
+      "F36"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F37-baseline.png",
+    "surfaces": [
+      "F37"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F38-baseline.png",
+    "surfaces": [
+      "F38"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F39-baseline.png",
+    "surfaces": [
+      "F39"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F40-baseline.png",
+    "surfaces": [
+      "F40"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F41-baseline.png",
+    "surfaces": [
+      "F41"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F42-baseline.png",
+    "surfaces": [
+      "F42"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F43-baseline.png",
+    "surfaces": [
+      "F43"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F44-baseline.png",
+    "surfaces": [
+      "F44"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F45-baseline.png",
+    "surfaces": [
+      "F45"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F46-baseline.png",
+    "surfaces": [
+      "F46"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F47-baseline.png",
+    "surfaces": [
+      "F47"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F48-baseline.png",
+    "surfaces": [
+      "F48"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F49-baseline.png",
+    "surfaces": [
+      "F49"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F50-baseline.png",
+    "surfaces": [
+      "F50"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F51-baseline.png",
+    "surfaces": [
+      "F51"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F52-baseline.png",
+    "surfaces": [
+      "F52"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F53-baseline.png",
+    "surfaces": [
+      "F53"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F54-baseline.png",
+    "surfaces": [
+      "F54"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F55-baseline.png",
+    "surfaces": [
+      "F55"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F56-baseline.png",
+    "surfaces": [
+      "F56"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F57-baseline.png",
+    "surfaces": [
+      "F57"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F58-baseline.png",
+    "surfaces": [
+      "F58"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F59-baseline.png",
+    "surfaces": [
+      "F59"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F60-baseline.png",
+    "surfaces": [
+      "F60"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F61-baseline.png",
+    "surfaces": [
+      "F61"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F62-baseline.png",
+    "surfaces": [
+      "F62"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F63-baseline.png",
+    "surfaces": [
+      "F63"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F64-baseline.png",
+    "surfaces": [
+      "F64"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F65-baseline.png",
+    "surfaces": [
+      "F65"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F66-baseline.png",
+    "surfaces": [
+      "F66"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F67-baseline.png",
+    "surfaces": [
+      "F67"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F68-baseline.png",
+    "surfaces": [
+      "F68"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F69-baseline.png",
+    "surfaces": [
+      "F69"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F70-baseline.png",
+    "surfaces": [
+      "F70"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F71-baseline.png",
+    "surfaces": [
+      "F71"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F72-baseline.png",
+    "surfaces": [
+      "F72"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "F73-baseline.png",
+    "surfaces": [
+      "F73"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-summary-empty.png",
+    "surfaces": [
+      "F01",
+      "EMPTY"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-movements-filtered.png",
+    "surfaces": [
+      "F02",
+      "F04",
+      "F06"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-cobro-parcial.png",
+    "surfaces": [
+      "F17",
+      "F20",
+      "F21",
+      "PARTIAL"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-cobro-mixto.png",
+    "surfaces": [
+      "F17",
+      "F19",
+      "F20"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-varias-obligaciones.png",
+    "surfaces": [
+      "F17",
+      "F69"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-gasto-pagado.png",
+    "surfaces": [
+      "F35",
+      "F36",
+      "CONFIRMED"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-gasto-pendiente.png",
+    "surfaces": [
+      "F35",
+      "F25",
+      "PENDING"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-sena.png",
+    "surfaces": [
+      "F31",
+      "F32"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-anticipo.png",
+    "surfaces": [
+      "F29",
+      "F30"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-caja-abierta.png",
+    "surfaces": [
+      "F43",
+      "OPEN"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-arqueo-diferencia.png",
+    "surfaces": [
+      "F47",
+      "F49",
+      "DIFFERENCE"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-relevo.png",
+    "surfaces": [
+      "F67",
+      "RETURN_FROM_HANDOFF"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-externo-no-verificado.png",
+    "surfaces": [
+      "F17",
+      "F68",
+      "UNVERIFIED"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-autorizacion-pendiente.png",
+    "surfaces": [
+      "F71",
+      "APPROVAL_REQUIRED"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-permiso-denegado.png",
+    "surfaces": [
+      "F63",
+      "PERMISSION_DENIED"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-resultado-incierto.png",
+    "surfaces": [
+      "F56",
+      "UNKNOWN"
+    ],
+    "viewport": "390x844"
+  },
+  {
+    "file": "variant-viewport-320.png",
+    "surfaces": [
+      "F01",
+      "320x700"
+    ],
+    "viewport": "320x700"
+  },
+  {
+    "file": "variant-viewport-430.png",
+    "surfaces": [
+      "F64",
+      "430x932"
+    ],
+    "viewport": "430x932"
+  }
+]

@@ -1,0 +1,559 @@
+[
+  {
+    "file": "screens/M01-baseline.png",
+    "surface": "M01",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M02-baseline.png",
+    "surface": "M02",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M03-baseline.png",
+    "surface": "M03",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M04-baseline.png",
+    "surface": "M04",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M05-baseline.png",
+    "surface": "M05",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M06-baseline.png",
+    "surface": "M06",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M07-baseline.png",
+    "surface": "M07",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M08-baseline.png",
+    "surface": "M08",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M09-baseline.png",
+    "surface": "M09",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M10-baseline.png",
+    "surface": "M10",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M11-baseline.png",
+    "surface": "M11",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M12-baseline.png",
+    "surface": "M12",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M13-baseline.png",
+    "surface": "M13",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M14-baseline.png",
+    "surface": "M14",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M15-baseline.png",
+    "surface": "M15",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M16-baseline.png",
+    "surface": "M16",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M17-baseline.png",
+    "surface": "M17",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M18-baseline.png",
+    "surface": "M18",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M19-baseline.png",
+    "surface": "M19",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M20-baseline.png",
+    "surface": "M20",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M21-baseline.png",
+    "surface": "M21",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M22-baseline.png",
+    "surface": "M22",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M23-baseline.png",
+    "surface": "M23",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M24-baseline.png",
+    "surface": "M24",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M25-baseline.png",
+    "surface": "M25",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M26-baseline.png",
+    "surface": "M26",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M27-baseline.png",
+    "surface": "M27",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M28-baseline.png",
+    "surface": "M28",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M29-baseline.png",
+    "surface": "M29",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M30-baseline.png",
+    "surface": "M30",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M31-baseline.png",
+    "surface": "M31",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M32-baseline.png",
+    "surface": "M32",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M33-baseline.png",
+    "surface": "M33",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M34-baseline.png",
+    "surface": "M34",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M35-baseline.png",
+    "surface": "M35",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M36-baseline.png",
+    "surface": "M36",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M37-baseline.png",
+    "surface": "M37",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M38-baseline.png",
+    "surface": "M38",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M39-baseline.png",
+    "surface": "M39",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M40-baseline.png",
+    "surface": "M40",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M41-baseline.png",
+    "surface": "M41",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M42-baseline.png",
+    "surface": "M42",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M43-baseline.png",
+    "surface": "M43",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M44-baseline.png",
+    "surface": "M44",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M45-baseline.png",
+    "surface": "M45",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M46-baseline.png",
+    "surface": "M46",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M47-baseline.png",
+    "surface": "M47",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M48-baseline.png",
+    "surface": "M48",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M49-baseline.png",
+    "surface": "M49",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M50-baseline.png",
+    "surface": "M50",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M51-baseline.png",
+    "surface": "M51",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M52-baseline.png",
+    "surface": "M52",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M53-baseline.png",
+    "surface": "M53",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M54-baseline.png",
+    "surface": "M54",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M55-baseline.png",
+    "surface": "M55",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M56-baseline.png",
+    "surface": "M56",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M57-baseline.png",
+    "surface": "M57",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M58-baseline.png",
+    "surface": "M58",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M59-baseline.png",
+    "surface": "M59",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M60-baseline.png",
+    "surface": "M60",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M61-baseline.png",
+    "surface": "M61",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M62-baseline.png",
+    "surface": "M62",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M63-baseline.png",
+    "surface": "M63",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M64-baseline.png",
+    "surface": "M64",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M65-baseline.png",
+    "surface": "M65",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M66-baseline.png",
+    "surface": "M66",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M67-baseline.png",
+    "surface": "M67",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M68-baseline.png",
+    "surface": "M68",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M69-baseline.png",
+    "surface": "M69",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M70-baseline.png",
+    "surface": "M70",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M71-baseline.png",
+    "surface": "M71",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M72-baseline.png",
+    "surface": "M72",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M73-baseline.png",
+    "surface": "M73",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M74-baseline.png",
+    "surface": "M74",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M75-baseline.png",
+    "surface": "M75",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M76-baseline.png",
+    "surface": "M76",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M77-baseline.png",
+    "surface": "M77",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M78-baseline.png",
+    "surface": "M78",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M79-baseline.png",
+    "surface": "M79",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M80-baseline.png",
+    "surface": "M80",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M81-baseline.png",
+    "surface": "M81",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M82-baseline.png",
+    "surface": "M82",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/M83-baseline.png",
+    "surface": "M83",
+    "viewport": "390x844",
+    "tags": []
+  },
+  {
+    "file": "screens/responsive-M01-320.png",
+    "surface": "M01",
+    "viewport": "320x700",
+    "tags": [
+      "responsive",
+      "ST08"
+    ]
+  },
+  {
+    "file": "screens/responsive-M47-390.png",
+    "surface": "M47",
+    "viewport": "390x844",
+    "tags": [
+      "responsive",
+      "publish-review"
+    ]
+  },
+  {
+    "file": "screens/responsive-M83-430.png",
+    "surface": "M83",
+    "viewport": "430x932",
+    "tags": [
+      "responsive",
+      "cross-domain"
+    ]
+  },
+  {
+    "file": "screens/policy-required-promotion.png",
+    "surface": "M52",
+    "viewport": "390x844",
+    "tags": [
+      "POLICY_REQUIRED"
+    ]
+  },
+  {
+    "file": "screens/policy-required-deposit.png",
+    "surface": "M59",
+    "viewport": "390x844",
+    "tags": [
+      "POLICY_REQUIRED"
+    ]
+  },
+  {
+    "file": "screens/resource-conflict.png",
+    "surface": "M62",
+    "viewport": "390x844",
+    "tags": [
+      "CONFLICT"
+    ]
+  },
+  {
+    "file": "screens/empty-history.png",
+    "surface": "M42",
+    "viewport": "390x844",
+    "tags": [
+      "EMPTY"
+    ]
+  }
+]

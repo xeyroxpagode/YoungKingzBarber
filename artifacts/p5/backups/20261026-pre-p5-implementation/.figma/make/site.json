@@ -1,0 +1,11 @@
+{
+  "title": "YoungKingZ Owner Design",
+  "description": "Workspace de diseño para la Experiencia del Dueño de YoungKingZ.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
