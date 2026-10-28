@@ -1,0 +1,5 @@
+"use client";
+import { useState } from "react";
+import { Button, Field } from "@youngkingz/ui";
+const apiUrl=process.env.NEXT_PUBLIC_API_URL??"http://127.0.0.1:4100";
+export function RecoveryForm(){const [email,setEmail]=useState("");const [done,setDone]=useState(false);const [busy,setBusy]=useState(false);async function submit(event:React.FormEvent){event.preventDefault();setBusy(true);await fetch(`${apiUrl}/v1/iam/password-recovery`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email})}).catch(()=>null);setDone(true);setBusy(false);}return <form className="auth-card stack" onSubmit={submit}><span className="eyebrow">Recuperación</span><h2>Recuperá tu contraseña.</h2><p className="muted">Por seguridad, la respuesta es la misma exista o no una cuenta.</p>{done?<div className="notice success">Si el correo corresponde a una cuenta, recibirás instrucciones.</div>:<><Field label="Correo" type="email" required value={email} onChange={event=>setEmail(event.target.value)}/><Button disabled={busy}>{busy?"Solicitando…":"Enviar instrucciones"}</Button></>}</form>}

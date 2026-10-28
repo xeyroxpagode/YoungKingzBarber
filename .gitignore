@@ -3,6 +3,13 @@ dist/
 build/
 .cache/
 .env*
+!.env.example
+.next/
+coverage/
+playwright-report/
+test-results/
+docs/h01/evidence/runtime/*.dump
+docs/h01/evidence/runtime/environment.json
 .vite/
 vite.config.*.timestamp-*
 *.tsbuildinfo

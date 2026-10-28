@@ -1,0 +1,2 @@
+import { NewPasswordForm } from "@/features/auth/NewPasswordForm";
+export default function ResetPasswordPage(){return <main className="auth-shell"><section className="auth-brand"><div className="auth-mark">Young Kingz</div><div><h1>Protegé tu cuenta.</h1><p>Una contraseña nueva no modifica tus roles ni tu estado laboral.</p></div></section><section className="auth-panel"><NewPasswordForm/></section></main>}

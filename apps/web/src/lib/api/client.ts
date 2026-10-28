@@ -1,0 +1,5 @@
+import { createClient } from "../supabase/client";
+
+const base=process.env.NEXT_PUBLIC_API_URL??"http://127.0.0.1:4100";
+export class ApiError extends Error{constructor(public code:string,message:string,public status:number,public details?:unknown){super(message);}}
+export async function api<T>(path:string,options:RequestInit&{operationId?:string}={}):Promise<T>{const supabase=createClient();const {data}=await supabase.auth.getSession();const token=data.session?.access_token;if(!token)throw new ApiError("UNAUTHENTICATED","Tu sesión terminó",401);const headers=new Headers(options.headers);headers.set("authorization",`Bearer ${token}`);if(options.body)headers.set("content-type","application/json");if(options.operationId)headers.set("x-operation-id",options.operationId);const response=await fetch(`${base}${path}`,{...options,headers,cache:"no-store"});const payload=await response.json().catch(()=>({}));if(!response.ok)throw new ApiError(payload.error?.code??"REQUEST_FAILED",payload.error?.message??"No se pudo completar la operación",response.status,payload.error?.details);return payload as T;}

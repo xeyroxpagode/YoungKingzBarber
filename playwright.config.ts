@@ -1,15 +1,12 @@
 import { defineConfig, devices } from "@playwright/test"
 
 export default defineConfig({
-  testDir: "./tests",
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
-  reporter: "html",
+  testDir: "./tests/h01/e2e",
+  fullyParallel: false,
+  retries: 0,
   use: {
-    baseURL: "http://localhost:5173",
-    trace: "on-first-retry",
+    baseURL: "http://localhost:3100",
+    trace: "retain-on-failure",
   },
   projects: [
     {
@@ -17,10 +14,8 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
   ],
-  webServer: {
-    command: "npm run dev",
-    url: "http://localhost:5173",
-    reuseExistingServer: !process.env.CI,
-    timeout: 120000,
-  },
+  webServer: [
+    { command: "pnpm dev:api", port: 4100, reuseExistingServer: true },
+    { command: "pnpm dev:web", port: 3100, reuseExistingServer: true },
+  ],
 })

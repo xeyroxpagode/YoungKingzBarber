@@ -1,0 +1,2 @@
+import { RecoveryForm } from "@/features/auth/RecoveryForm";
+export default function RecoverPage(){return <main className="auth-shell"><section className="auth-brand"><div className="auth-mark">Young Kingz</div><div><h1>Volvé con seguridad.</h1><p>Recuperar credenciales no reactiva permisos laborales suspendidos o revocados.</p></div></section><section className="auth-panel"><RecoveryForm/></section></main>}

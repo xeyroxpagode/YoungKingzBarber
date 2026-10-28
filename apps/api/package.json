@@ -1,0 +1,30 @@
+{
+  "name": "@youngkingz/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/server.js",
+    "cli:provision": "tsx src/cli/provision.ts",
+    "cli:bootstrap-owner": "tsx src/cli/bootstrap-owner.ts",
+    "cli:admin-recovery": "tsx src/cli/admin-recovery.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/swagger": "^9.9.2",
+    "@fastify/swagger-ui": "^6.1.2",
+    "@supabase/supabase-js": "^2.118.0",
+    "@youngkingz/config": "workspace:*",
+    "@youngkingz/contracts": "workspace:*",
+    "@youngkingz/database": "workspace:*",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.4",
+    "fastify": "^5.12.7",
+    "postgres": "^3.4.7",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": { "@types/node": "^24.10.0", "tsx": "^4.20.6", "typescript": "^7.0.2" }
+}

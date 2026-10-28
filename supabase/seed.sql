@@ -1,0 +1,1 @@
+-- H01 intentionally has no synthetic business seed. Use `pnpm provision` and the restricted bootstrap CLI.
