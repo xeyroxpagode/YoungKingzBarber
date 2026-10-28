@@ -22,9 +22,11 @@
     "bootstrap:owner": "pnpm --filter @youngkingz/api cli:bootstrap-owner",
     "recovery:admin": "pnpm --filter @youngkingz/api cli:admin-recovery",
     "backup:verify": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/backup-restore-cert.ps1",
-    "evidence": "tsx scripts/generate-evidence.ts"
+    "evidence": "tsx scripts/generate-evidence.ts",
+    "h01:certify": "node scripts/h01-certify.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@playwright/test": "^1.56.1",
     "@supabase/supabase-js": "^2.118.0",
     "@types/node": "^24.10.0",

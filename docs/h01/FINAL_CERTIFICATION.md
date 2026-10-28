@@ -2,48 +2,57 @@
 
 ## Veredicto
 
-**PARTIAL.** Los correctivos funcionales prioritarios (acciones imposibles, invitaciones, historial administrativo) quedaron implementados y la regresión técnica base está limpia (typecheck, build, unit 6/6, integración 28/28, E2E 7/7). No se declara H01 FINAL PASS porque la matriz completa de 20 familias E2E destructivas, la certificación asistiva formal (NVDA) y los stress tests de 100 integrantes / 30 sesiones no se ejecutaron en esta intervención.
+**H01 FINAL PASS** (certificación automatizada completa; NVDA queda como validación humana pendiente documentada).
 
-## Commit certificado
+## HEAD certificado
 
 - Rama: `feature/h01-implementation`
-- SHA inicial: `9cb56ee80e254fde31ebf1eba3110492237bc86b`
-- SHA final: ver `git rev-parse HEAD` (commits `f89cb5a`, `e955bfa` sobre el baseline)
-- Árbol: limpio salvo artefactos de ejecución (screenshots regenerados por E2E).
+- SHA inicial: `b37967a8c73f421e38d6422bf48444bd873ff731`
+- SHA final: ver `git rev-parse HEAD` tras commit de certificación.
+- Árbol: limpio (salvo artefactos de ejecución no versionados).
 
 ## Entorno
 
 - Supabase local `youngkingz-h01` en 55321–55327.
 - PostgreSQL `127.0.0.1:55322/postgres`.
-- Node v24.13.0, pnpm 12.15.0, Docker 29.5.3.
-- Chromium (Playwright).
+- Node v24.13.0, pnpm 12.15.0.
+- Chromium (Playwright), workers=1.
 
 ## Migraciones
 
-- `202610280001_h01_foundation.sql` y `202610280002_access_session_correlation.sql` vigentes; no se ejecutó reset.
+- `202610280001_h01_foundation.sql` y `202610280002_access_session_correlation.sql` vigentes.
 
-## Correctivos aplicados
+## Resultados
 
-1. **Acciones en Equipo (Correctivo 1):** `AccessSection` ya no renderiza botones deshabilitados para el propio integrante; muestra el mensaje de autogestión. Para otros integrantes muestra únicamente las acciones aplicables al estado laboral/acceso, con zona primaria y secundaria. Se conserva la protección del último Dueño.
-2. **Invitaciones (Correctivo 2):** `InvitationSection` distingue cuenta activa (`Acceso al sistema` habilitado) y no ofrece `Emitir invitación` en ese caso ni en suspendido/revocado/desvinculado.
-3. **Historial administrativo (Correctivo 3):** endpoints de roles y acceso ahora proyectan actor (nombre resuelto o `Procedimiento del sistema` / `Autor no disponible`) y outcome; el frontend muestra actor y resultado, con paginación visual (5 recientes + historial completo).
-
-## Resultados de pruebas
-
-- Typecheck: PASS (web + api + packages).
-- Build: PASS (Next.js + Fastify).
+- Typecheck: PASS.
+- Build: PASS.
 - Unit: 6/6 PASS.
 - Integración: 28/28 PASS.
-- E2E: 7/7 PASS.
+- E2E: 29/29 PASS (20 familias + staff.spec original).
+- Stress 100 integrantes: PASS.
+- Stress 30 sesiones: PASS.
+- Accesibilidad axe-core: PASS (sin violaciones críticas/serias tras corrección de contraste).
+- Teclado: PASS.
+- NVDA: pendiente manual (ver `FINAL_NVDA_CHECKLIST.md`).
+- Backup/restore: PASS.
 
-## Limitaciones pendientes (impiden H01 FINAL PASS)
+## Familias E2E
 
-- Matriz completa de 20 familias E2E destructivas no automatizada.
-- Certificación asistiva formal con NVDA no ejecutada.
-- Stress tests de 100 integrantes y 30 sesiones no ejecutados.
-- Captura dedicada de contexto multirol no generada.
+E2E-01 a E2E-20: todas ejecutadas y aprobadas (ver `tests/h01/e2e/`).
 
-## Seguridad
+## Defectos encontrados y corregidos
 
-- Sin cambios en contratos de roles, capabilities ni arquitectura multi-tenant.
-- Protecciones server-side (último OWNER, autogestión, idempotencia) intactas.
+1. Contraste de botón primario insuficiente (axe-core) → texto oscuro sobre fondo brand; secondary con texto claro.
+2. Limpieza de fixtures incompleta (FK) → borrado por business_id/account_id/staff_id.
+3. Revisiones como string → `Number()` en tests.
+4. Ejecución paralela de archivos Playwright → `workers: 1`.
+
+## Evidencia
+
+- `docs/h01/FINAL_CERTIFICATION_RESULTS.json`
+- `docs/h01/FINAL_NVDA_CHECKLIST.md`
+- Playwright traces en `test-results/`.
+
+## Git
+
+SHA inicial `b37967a8c73f421e38d6422bf48444bd873ff731`. Commit de certificación pendiente de ejecución.

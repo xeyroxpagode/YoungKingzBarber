@@ -1,0 +1,29 @@
+{
+  "steps": [
+    {
+      "name": "typecheck",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "unit",
+      "status": "PASS"
+    },
+    {
+      "name": "integration",
+      "status": "PASS"
+    },
+    {
+      "name": "e2e",
+      "status": "PASS"
+    },
+    {
+      "name": "backup",
+      "status": "PASS"
+    }
+  ],
+  "generatedAt": "2026-10-28T19:10:12.141Z"
+}
