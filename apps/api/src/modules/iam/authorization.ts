@@ -1,7 +1,7 @@
 import type { FastifyRequest } from "fastify";
 import { DomainError, roleCapabilities, type Capability, type RoleCode } from "@youngkingz/contracts";
 import { one, rows, sql } from "../../lib/sql.js";
-import { supabaseAdmin } from "../../lib/runtime.js";
+import { database, supabaseAdmin } from "../../lib/runtime.js";
 
 export interface Actor {
   accountId: string; personId: string; businessId: string; staffMemberId: string; accessSessionId: string;
@@ -38,28 +38,42 @@ export class AuthorizationService {
     const assignments = await rows<RoleRow>(sql`select id, role::text role from iam.role_assignments where business_id = ${identity.business_id} and staff_member_id = ${identity.staff_member_id} and revoked_at is null and effective_at is not null order by created_at`);
     if (!assignments.length) throw new DomainError("FORBIDDEN", "No active responsibility is assigned", 403);
     const claims = tokenClaims(token);
+    const providerSessionId = claims.session_id;
+    if (!providerSessionId) throw new DomainError("UNAUTHENTICATED", "The provider session identifier is missing", 401);
     if (identity.recovery_required) throw new DomainError("ACCESS_RESTRICTED", "Account recovery must be completed", 403);
     if (claims.iat && identity.sessions_valid_after && claims.iat * 1000 < new Date(identity.sessions_valid_after).getTime()) throw new DomainError("SESSION_REVOKED", "Session predates the latest credential security change", 401);
-    let session = await one<{ id: string; active_role_assignment_id: string | null; context_revision: number }>(sql`
-      select id, active_role_assignment_id, context_revision from iam.access_sessions
-      where account_id = ${identity.account_id} and business_id = ${identity.business_id}
-        and auth_session_id is not distinct from ${claims.session_id ?? null} and revoked_at is null and expires_at > now()
-      order by created_at desc limit 1`);
-    if (!session) {
-      const revoked = await one<{ id: string }>(sql`select id from iam.access_sessions where account_id=${identity.account_id} and business_id=${identity.business_id} and auth_session_id is not distinct from ${claims.session_id ?? null} and revoked_at is not null order by revoked_at desc limit 1`);
-      if (revoked) throw new DomainError("SESSION_REVOKED", "Operational session has been revoked", 401);
-      const preferred = await one<{ role_assignment_id: string }>(sql`select role_assignment_id from iam.user_context_preferences where account_id = ${identity.account_id} and business_id = ${identity.business_id}`);
-      const active = assignments.find((item) => item.id === preferred?.role_assignment_id) ?? assignments[0]!;
-      session = await one<{ id: string; active_role_assignment_id: string; context_revision: number }>(sql`
+    const session = await database.client.begin(async (tx) => {
+      // A page load performs several authorized requests in parallel. The provider
+      // session is the correlation boundary, so serialize only its first resolution.
+      await tx`select pg_advisory_xact_lock(hashtextextended(${`${identity.account_id}:${identity.business_id}:${providerSessionId}`}, 0))`;
+      const existing = await tx`
+        select id,active_role_assignment_id,context_revision from iam.access_sessions
+        where account_id=${identity.account_id} and business_id=${identity.business_id}
+          and auth_session_id=${providerSessionId} and revoked_at is null
+        order by created_at desc limit 1` as unknown as { id: string; active_role_assignment_id: string | null; context_revision: number }[];
+      if (existing[0]) {
+        // A refreshed JWT keeps the same provider session_id. Extend the observed
+        // provider expiry instead of manufacturing another operational session.
+        const [refreshed] = await tx`
+          update iam.access_sessions set expires_at=greatest(expires_at,to_timestamp(${claims.exp ?? Math.floor(Date.now()/1000)+3600})),last_seen_at=now()
+          where id=${existing[0].id} returning id,active_role_assignment_id,context_revision` as unknown as { id: string; active_role_assignment_id: string | null; context_revision: number }[];
+        return refreshed!;
+      }
+      const revoked = await tx`select id from iam.access_sessions where account_id=${identity.account_id} and business_id=${identity.business_id} and auth_session_id=${providerSessionId} and revoked_at is not null limit 1`;
+      if (revoked.length) throw new DomainError("SESSION_REVOKED", "Operational session has been revoked", 401);
+      const preferred = await tx`select role_assignment_id from iam.user_context_preferences where account_id=${identity.account_id} and business_id=${identity.business_id}` as unknown as { role_assignment_id: string }[];
+      const active = assignments.find((item) => item.id === preferred[0]?.role_assignment_id) ?? assignments[0]!;
+      const [created] = await tx`
         insert into iam.access_sessions(account_id,business_id,staff_member_id,active_role_assignment_id,auth_session_id,expires_at)
-        values (${identity.account_id},${identity.business_id},${identity.staff_member_id},${active.id},${claims.session_id ?? null},to_timestamp(${claims.exp ?? Math.floor(Date.now()/1000)+3600}))
-        returning id, active_role_assignment_id, context_revision`);
-    }
+        values (${identity.account_id},${identity.business_id},${identity.staff_member_id},${active.id},${providerSessionId},to_timestamp(${claims.exp ?? Math.floor(Date.now()/1000)+3600}))
+        returning id,active_role_assignment_id,context_revision` as unknown as { id: string; active_role_assignment_id: string; context_revision: number }[];
+      return created!;
+    });
     const selected = assignments.find((item) => item.id === session?.active_role_assignment_id) ?? assignments[0]!;
     const grants = await rows<{ capability: Capability }>(sql`select capability from iam.capability_grants where role_assignment_id = ${selected.id} and revoked_at is null and valid_from <= now() and (expires_at is null or expires_at > now())`);
     const capabilities = new Set<Capability>([...roleCapabilities[selected.role], ...grants.map((grant) => grant.capability)]);
-    await databaseTouch(session!.id);
-    return { accountId: identity.account_id, personId: identity.person_id, businessId: identity.business_id, staffMemberId: identity.staff_member_id, accessSessionId: session!.id, roleAssignmentId: selected.id, role: selected.role, contextRevision: Number(session!.context_revision), capabilities, email: data.user.email };
+    await databaseTouch(session.id);
+    return { accountId: identity.account_id, personId: identity.person_id, businessId: identity.business_id, staffMemberId: identity.staff_member_id, accessSessionId: session.id, roleAssignmentId: selected.id, role: selected.role, contextRevision: Number(session.context_revision), capabilities, email: data.user.email };
   }
 
   require(actor: Actor, capability: Capability): void {

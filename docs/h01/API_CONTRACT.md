@@ -26,6 +26,8 @@ The API verifies the Supabase identity, UserAccount, Staff membership, access st
 
 The first command inserts `system.operation_attempts` with command name and a canonical SHA-256 request fingerprint. A successful exact retry returns the stored response with `replayed: true`. Reusing an identifier for different content returns `409 IDEMPOTENCY_CONFLICT`. Facts and audit are committed in the same PostgreSQL transaction. Supabase Auth/email effects run after the local commit and use delivery/reconciliation states instead of claiming distributed atomicity.
 
+H01 V1.1 keeps these routes and adds compatible query controls: `GET /v1/staff?search=&status=` accepts `CURRENT`, `PENDING`, `SUSPENDED`, `HISTORICAL` or `ALL`; `GET /v1/iam/access-sessions?view=&cursor=&limit=` returns `{ items, nextCursor }` for `ACTIVE` or `HISTORY`. `PATCH /v1/iam/me` uses the existing `iam.self.update` capability, the Staff revision and an operation id.
+
 ## Stable errors
 
 `UNAUTHENTICATED`, `FORBIDDEN`, `NOT_FOUND`, `VALIDATION_ERROR`, `CONFLICT`, `STALE_REVISION`, `LAST_OWNER_PROTECTED`, `SESSION_REVOKED`, `ACCESS_RESTRICTED`, `INVITATION_INVALID`, `INVITATION_EXPIRED`, `IDEMPOTENCY_CONFLICT`, `EXTERNAL_OUTCOME_UNKNOWN`.

@@ -5,19 +5,33 @@ import { createOpaqueToken } from "../../lib/crypto.js";
 import { database, runtime, supabaseAdmin } from "../../lib/runtime.js";
 import { rows, sql } from "../../lib/sql.js";
 
-export async function listStaff(actor: Actor) {
+export async function listStaff(actor: Actor, options: { search?: string; status: "CURRENT"|"PENDING"|"SUSPENDED"|"HISTORICAL"|"ALL" }) {
+  const search = options.search?.trim() ? `%${options.search.trim()}%` : undefined;
+  const statusFilter = options.status === "PENDING" ? sql`and (sm.employment_status='ONBOARDING' or sm.access_status='PENDING_ACTIVATION')`
+    : options.status === "SUSPENDED" ? sql`and sm.access_status='SUSPENDED'`
+    : options.status === "HISTORICAL" ? sql`and sm.employment_status='INACTIVE'`
+    : options.status === "CURRENT" ? sql`and sm.employment_status<>'INACTIVE' and sm.access_status not in ('SUSPENDED','REVOKED','PENDING_ACTIVATION')`
+    : sql``;
   return rows(sql`select sm.id, sm.revision, sm.employment_status "employmentStatus", sm.access_status "accessStatus", p.first_name "firstName", p.last_name "lastName", p.phone,
     coalesce(ua.verified_email::text, ai.email::text) email,
-    coalesce(array_agg(ra.role::text) filter (where ra.revoked_at is null and ra.effective_at is not null), '{}') roles
+    coalesce(array_agg(ra.role::text) filter (where ra.revoked_at is null and ra.effective_at is not null), '{}') roles,
+    case when sm.id=${actor.staffMemberId} then true else false end "isSelf",
+    case when exists(select 1 from iam.role_assignments own where own.business_id=sm.business_id and own.staff_member_id=sm.id and own.role='OWNER' and own.revoked_at is null and own.effective_at is not null) and iam.valid_owner_count(${actor.businessId})<=1 then true else false end "isLastOwner"
     from team.staff_members sm join iam.persons p on p.id=sm.person_id
     left join iam.user_accounts ua on ua.person_id=p.id
     left join lateral (select email from iam.account_invitations i where i.staff_member_id=sm.id order by i.created_at desc limit 1) ai on true
     left join iam.role_assignments ra on ra.staff_member_id=sm.id
-    where sm.business_id=${actor.businessId} group by sm.id,p.id,ua.verified_email,ai.email order by p.first_name,p.last_name`);
+    where sm.business_id=${actor.businessId}
+      ${search ? sql`and (p.first_name ilike ${search} or p.last_name ilike ${search} or concat_ws(' ',p.first_name,p.last_name) ilike ${search} or coalesce(ua.verified_email::text,ai.email::text,'') ilike ${search})` : sql``}
+      ${statusFilter}
+    group by sm.id,p.id,ua.verified_email,ai.email order by p.first_name,p.last_name limit 100`);
 }
 
 export async function getStaff(actor: Actor, id: string) {
-  const [member] = await rows(sql`select sm.id,sm.revision,sm.employment_status "employmentStatus",sm.access_status "accessStatus",p.first_name "firstName",p.last_name "lastName",p.phone,ua.verified_email::text email from team.staff_members sm join iam.persons p on p.id=sm.person_id left join iam.user_accounts ua on ua.person_id=p.id where sm.business_id=${actor.businessId} and sm.id=${id}`);
+  const [member] = await rows(sql`select sm.id,sm.revision,sm.employment_status "employmentStatus",sm.access_status "accessStatus",p.first_name "firstName",p.last_name "lastName",p.phone,ua.verified_email::text email,
+    case when sm.id=${actor.staffMemberId} then true else false end "isSelf",
+    case when exists(select 1 from iam.role_assignments own where own.business_id=sm.business_id and own.staff_member_id=sm.id and own.role='OWNER' and own.revoked_at is null and own.effective_at is not null) and iam.valid_owner_count(${actor.businessId})<=1 then true else false end "isLastOwner"
+    from team.staff_members sm join iam.persons p on p.id=sm.person_id left join iam.user_accounts ua on ua.person_id=p.id where sm.business_id=${actor.businessId} and sm.id=${id}`);
   if (!member) throw new DomainError("NOT_FOUND", "Staff member not found", 404);
   return member;
 }

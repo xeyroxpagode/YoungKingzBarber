@@ -32,3 +32,5 @@ UUIDs are stable primary identities. Business-owned relations carry `business_id
 Private schemas are not exposed through the Supabase Data API. `anon` and `authenticated` receive no schema/table access. RLS is enabled on all H01 tables. `service_role` is available only to the server, and Fastify still applies business authorization because privileged connections can bypass RLS.
 
 No password, JWT, refresh token, cookie or reusable invitation token is stored in H01 tables or audit changes.
+
+Migration `202610280002_access_session_correlation.sql` reconciles erroneous open duplicates without deleting history and adds a partial unique index for one open operational row per account, Business and Supabase `session_id`. Refreshing a JWT extends the observed expiry of that same row.

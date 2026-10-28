@@ -12,6 +12,8 @@ Provisioning and the first Owner are local/internal CLIs with a verified databas
 
 Every verified JWT resolves an operational `access_session`. A revoked matching session is rejected instead of silently recreated. `sessions_valid_after` blocks older JWTs even if their cryptographic expiry has not elapsed. Password recovery never changes Staff access state or roles.
 
+The Supabase `session_id` is the correlation key. Concurrent first requests are serialized and an ordinary token refresh reuses the open operational row. `CORRELATION_DUPLICATE_RECONCILED` identifies preserved legacy rows that were closed by the V1.1 migration; it does not represent a separate authentic device.
+
 Use Mi cuenta to terminate current, other or all operational sessions. For compromise, use the compromise action: it marks recovery required and revokes every operational session before recovery continues.
 
 ## Last Owner

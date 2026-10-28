@@ -49,3 +49,22 @@ describe("H01 mandatory acceptance matrix",()=>{
   it("H01-AT-25 replays identical operation_id and conflicts on changed content",async()=>{const id=randomUUID();const payload={firstName:"Idempotent",inviteNow:false,roles:[]};const first=await request(ownerToken,"POST","/v1/staff",payload,id);const replay=await request(ownerToken,"POST","/v1/staff",payload,id);const conflict=await request(ownerToken,"POST","/v1/staff",{...payload,firstName:"Different"},id);expect(first.statusCode).toBe(200);expect(replay.statusCode).toBe(200);expect(replay.json().replayed).toBe(true);expect(conflict.statusCode).toBe(409);});
   it("H01-AT-26 keeps critical rows addressable for isolated backup certification",async()=>{const counts=await db`select (select count(*) from business.businesses)::int businesses,(select count(*) from iam.persons)::int persons,(select count(*) from system.audit_events)::int audit`;expect(counts[0]!.businesses).toBeGreaterThan(0);expect(counts[0]!.persons).toBeGreaterThan(0);expect(counts[0]!.audit).toBeGreaterThan(0);});
 });
+
+describe("H01 V1.1 corrective regressions",()=>{
+  it("H01-V11-01 correlates concurrent requests to one provider session",async()=>{
+    const token=await signIn(`owner-${suffix}@example.test`);
+    const claims=JSON.parse(Buffer.from(token.split(".")[1]!,"base64url").toString("utf8")) as {session_id:string};
+    const responses=await Promise.all(Array.from({length:8},()=>request(token,"GET","/v1/iam/me")));
+    expect(responses.every(response=>response.statusCode===200)).toBe(true);
+    const rows=await db`select count(*)::int count from iam.access_sessions where account_id=${ownerId} and business_id=${businessId} and auth_session_id=${claims.session_id} and revoked_at is null`;
+    expect(rows[0]!.count).toBe(1);
+  });
+
+  it("H01-V11-02 paginates active sessions without returning history",async()=>{
+    const response=await request(ownerToken,"GET","/v1/iam/access-sessions?view=ACTIVE&limit=5");
+    expect(response.statusCode).toBe(200);
+    expect(Array.isArray(response.json().items)).toBe(true);
+    expect(response.json().items.length).toBeLessThanOrEqual(5);
+    expect(response.json().items.every((item:{revokedAt?:string})=>!item.revokedAt)).toBe(true);
+  });
+});
