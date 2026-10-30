@@ -2,7 +2,8 @@ import { defineConfig, devices } from "@playwright/test"
 try { process.loadEnvFile?.(".env"); } catch {}
 
 export default defineConfig({
-  testDir: "./tests/h01/e2e",
+  testDir: "./tests",
+  testMatch: "**/e2e/**/*.spec.ts",
   fullyParallel: false,
   workers: 1,
   retries: 0,

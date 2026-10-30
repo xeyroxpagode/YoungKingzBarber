@@ -15,7 +15,7 @@ for (const step of steps) {
   let status = "PASS";
   try {
     execSync(step.cmd, { stdio: "inherit", cwd: process.cwd() });
-  } catch (e) {
+  } catch {
     status = "FAIL";
   }
   results.push({ name: step.name, status });

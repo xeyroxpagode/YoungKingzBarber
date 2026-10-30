@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { createOwnerContext, cleanupContext, signIn } from "./helpers";
+import { createOwnerContext, cleanupContext } from "./helpers";
 
 let ctx: Awaited<ReturnType<typeof createOwnerContext>>;
 test.beforeAll(async () => { ctx = await createOwnerContext(); });

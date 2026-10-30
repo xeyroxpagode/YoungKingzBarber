@@ -1,4 +1,4 @@
-import { contextSwitchSchema, DomainError, roleCapabilities, type Capability, type RoleCode } from "@youngkingz/contracts";
+import { contextSwitchSchema, DomainError, type Capability, type RoleCode } from "@youngkingz/contracts";
 import type { Actor } from "./authorization.js";
 import { executeOperation, audit } from "../system/operations.js";
 import { rows, sql } from "../../lib/sql.js";

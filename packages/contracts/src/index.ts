@@ -1,4 +1,5 @@
 import { z } from "zod";
+export * from "@youngkingz/contracts/catalog";
 
 export const roles = ["OWNER", "RECEPTIONIST", "BARBER"] as const;
 export const roleSchema = z.enum(roles);
@@ -13,14 +14,19 @@ export const capabilities = [
   "iam.grants.revoke", "iam.access.read", "iam.access.suspend",
   "iam.access.reactivate", "iam.access.revoke", "iam.access.offboard",
   "iam.access.reonboard", "iam.credentials.change", "iam.security.recover",
-  "iam.audit.read", "iam.operations.read"
+  "iam.audit.read", "iam.operations.read",
+  "catalog.read", "catalog.services.create", "catalog.services.update_profile",
+  "catalog.services.update_terms", "catalog.services.publish", "catalog.services.lifecycle",
+  "catalog.categories.manage"
 ] as const;
 export const capabilitySchema = z.enum(capabilities);
 export type Capability = z.infer<typeof capabilitySchema>;
 
 export const delegableCapabilities: readonly Capability[] = [
   "iam.staff.list", "iam.staff.read", "iam.staff.create", "iam.staff.update",
-  "iam.invitations.issue", "iam.invitations.reissue", "iam.invitations.revoke"
+  "iam.invitations.issue", "iam.invitations.reissue", "iam.invitations.revoke",
+  "catalog.services.create", "catalog.services.update_profile", "catalog.services.update_terms",
+  "catalog.services.publish", "catalog.services.lifecycle", "catalog.categories.manage"
 ];
 
 export const createStaffSchema = z.object({
@@ -43,11 +49,11 @@ export const contextSwitchSchema = z.object({ roleAssignmentId: z.string().uuid(
 export const lifecycleSchema = z.object({ revision: z.number().int().positive(), reason: z.string().trim().min(3).max(500) });
 export const terminateSessionsSchema = z.object({ scope: z.enum(["CURRENT", "OTHERS", "ALL"]), sessionId: z.string().uuid().optional() });
 
-export type DomainErrorCode = "UNAUTHENTICATED" | "FORBIDDEN" | "NOT_FOUND" | "VALIDATION_ERROR" | "CONFLICT" | "STALE_REVISION" | "LAST_OWNER_PROTECTED" | "SESSION_REVOKED" | "ACCESS_RESTRICTED" | "INVITATION_INVALID" | "INVITATION_EXPIRED" | "IDEMPOTENCY_CONFLICT" | "EXTERNAL_OUTCOME_UNKNOWN";
+export type DomainErrorCode = "UNAUTHENTICATED" | "FORBIDDEN" | "NOT_FOUND" | "VALIDATION_ERROR" | "CONFLICT" | "STALE_REVISION" | "LAST_OWNER_PROTECTED" | "SESSION_REVOKED" | "ACCESS_RESTRICTED" | "INVITATION_INVALID" | "INVITATION_EXPIRED" | "IDEMPOTENCY_CONFLICT" | "EXTERNAL_OUTCOME_UNKNOWN" | "SERVICE_NOT_PUBLISHABLE" | "SERVICE_ARCHIVED" | "CATEGORY_UNAVAILABLE" | "CATEGORY_IN_USE" | "CATEGORY_ARCHIVED";
 export class DomainError extends Error { constructor(public readonly code: DomainErrorCode, message: string, public readonly statusCode = 400, public readonly details?: unknown) { super(message); } }
 
 export const roleCapabilities: Readonly<Record<RoleCode, readonly Capability[]>> = {
   OWNER: capabilities.filter((capability) => capability !== "iam.security.recover"),
-  RECEPTIONIST: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch"],
+  RECEPTIONIST: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "catalog.read"],
   BARBER: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch"]
 };

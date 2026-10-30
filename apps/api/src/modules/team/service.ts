@@ -1,4 +1,4 @@
-import { createStaffSchema, delegableCapabilities, DomainError, grantSchema, lifecycleSchema, roles, updateRolesSchema, updateStaffSchema, type Capability, type RoleCode } from "@youngkingz/contracts";
+import { createStaffSchema, delegableCapabilities, DomainError, grantSchema, lifecycleSchema, roles, updateRolesSchema, updateStaffSchema, type RoleCode } from "@youngkingz/contracts";
 import type { Actor } from "../iam/authorization.js";
 import { audit, executeOperation } from "../system/operations.js";
 import { createOpaqueToken } from "../../lib/crypto.js";

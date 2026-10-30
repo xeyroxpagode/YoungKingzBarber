@@ -4,28 +4,32 @@ import { stableHash } from "../../lib/crypto.js";
 import { database } from "../../lib/runtime.js";
 import type { TransactionSql } from "postgres";
 
-type Tx = TransactionSql<Record<string, never>>;
+export type Tx = TransactionSql<Record<string, never>>;
 
 export async function executeOperation<T>(input: { operationId: string; command: string; actor: Actor; payload: unknown }, handler: (tx: Tx) => Promise<T>): Promise<{ data: T; replayed: boolean }> {
   const requestHash = stableHash({ command: input.command, payload: input.payload });
-  return database.client.begin(async (tx) => {
+  const result = await database.client.begin(async (tx) => {
     const existing = await tx`select request_hash, status::text status, response_body from system.operation_attempts where operation_id = ${input.operationId} for update`;
     if (existing.length) {
       if (existing[0]!.request_hash !== requestHash) throw new DomainError("IDEMPOTENCY_CONFLICT", "operation_id was already used with different content", 409);
-      if (existing[0]!.status === "SUCCEEDED") return { data: existing[0]!.response_body as T, replayed: true };
+      if (existing[0]!.status === "SUCCEEDED") return { ok: true as const, data: existing[0]!.response_body as T, replayed: true };
       throw new DomainError("CONFLICT", "The operation is already being reconciled", 409);
     }
     await tx`insert into system.operation_attempts(operation_id,business_id,actor_account_id,command_name,request_hash) values (${input.operationId},${input.actor.businessId},${input.actor.accountId},${input.command},${requestHash})`;
     try {
-      const data = await handler(tx);
+      const data = await tx.savepoint((operationTx) => handler(operationTx)) as T;
       await tx`update system.operation_attempts set status='SUCCEEDED',response_status=200,response_body=${JSON.stringify(data)}::jsonb,completed_at=now() where operation_id=${input.operationId}`;
-      return { data, replayed: false };
+      return { ok: true as const, data, replayed: false };
     } catch (error) {
       const code = error instanceof DomainError ? error.code : "INTERNAL_ERROR";
-      await tx`update system.operation_attempts set status='FAILED',error_code=${code},completed_at=now() where operation_id=${input.operationId}`;
-      throw error;
+      const status = error instanceof DomainError ? error.statusCode : 500;
+      const body = error instanceof DomainError ? { error: { code, message: error.message, details: error.details } } : { error: { code, message: "Unexpected infrastructure error" } };
+      await tx`update system.operation_attempts set status='FAILED',response_status=${status},response_body=${JSON.stringify(body)}::jsonb,error_code=${code},completed_at=now() where operation_id=${input.operationId}`;
+      return { ok: false as const, error };
     }
   });
+  if (!result.ok) throw result.error;
+  return { data: result.data, replayed: result.replayed };
 }
 
 export async function audit(tx: Tx, input: { actor: Actor; operationId: string; action: string; capability: string; resourceType: string; resourceId?: string; changes?: object; outcome?: string }) {
