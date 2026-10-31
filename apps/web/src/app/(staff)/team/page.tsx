@@ -1,2 +1,2 @@
-import { TeamWorkspace } from "@/features/team/TeamWorkspace";
-export default function TeamPage(){return <TeamWorkspace/>;}
+import { TeamLanding } from "@/features/team/TeamLanding";
+export default function TeamPage(){return <TeamLanding/>;}

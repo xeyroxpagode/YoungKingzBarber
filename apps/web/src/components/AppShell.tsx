@@ -16,13 +16,13 @@ export function AppShell({children}:{children:React.ReactNode}){
   const [contextCount,setContextCount]=useState(0);
   const router=useRouter();
   const pathname=usePathname();
-  const canSeeTeam=context?.capabilities.includes("iam.staff.list")??false;
+  const canSeeTeam=context?.capabilities.some(capability=>capability==="iam.staff.list"||capability==="professionals.read")??false;
   const canSeeCatalog=context?.capabilities.includes("catalog.read")??false;
 
   useEffect(()=>{
     Promise.all([api<Context>("/v1/iam/context"),api<ContextItem[]>("/v1/iam/contexts")]).then(([active,items])=>{
       setContext(active);setContextCount(items.length);
-      if(pathname.startsWith("/team")&&!active.capabilities.includes("iam.staff.list"))router.replace("/account");
+      if(pathname.startsWith("/team")&&!active.capabilities.some(capability=>capability==="iam.staff.list"||capability==="professionals.read"))router.replace("/account");
       if(pathname.startsWith("/services")&&!active.capabilities.includes("catalog.read"))router.replace("/account");
       if(pathname.startsWith("/context")&&items.length<=1)router.replace("/account");
     }).catch(()=>setContext(null));

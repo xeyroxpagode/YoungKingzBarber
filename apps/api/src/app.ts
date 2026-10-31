@@ -12,6 +12,7 @@ import { activeRoles, createStaff, getStaff, grants, issueGrant, lifecycle, list
 import { operationId } from "./modules/system/operations.js";
 import { rows, sql } from "./lib/sql.js";
 import { registerCatalogRoutes } from "./modules/catalog/routes.js";
+import { registerProfessionalRoutes } from "./modules/professionals/routes.js";
 import "./plugins/auth.js";
 
 const uuidParam = z.object({ id: z.string().uuid() });
@@ -20,7 +21,7 @@ const operationParam = z.object({ operationId: z.string().uuid() });
 export async function buildApp(): Promise<FastifyInstance> {
   const app = Fastify({ logger: { redact: ["req.headers.authorization", "req.headers.cookie", "body.token", "body.password"] }, trustProxy: true });
   await app.register(cors, { origin: runtime.webOrigin, credentials: true, methods: ["GET","HEAD","POST","PATCH","PUT","OPTIONS"], allowedHeaders: ["authorization","content-type","x-operation-id"] });
-  await app.register(swagger, { openapi: { info: { title: "YoungKingZ API", version: "2.1.0", description: "Authoritative IAM, Staff, and Catalog API" }, servers: [{ url: "http://127.0.0.1:4100" }], tags: [{name:"system"},{name:"iam"},{name:"team"},{name:"catalog"}] } });
+  await app.register(swagger, { openapi: { info: { title: "YoungKingZ API", version: "2.2.0", description: "Authoritative IAM, Staff, Catalog, and Professional Profiles API" }, servers: [{ url: "http://127.0.0.1:4100" }], tags: [{name:"system"},{name:"iam"},{name:"team"},{name:"catalog"},{name:"professionals"}] } });
   await app.register(swaggerUi, { routePrefix: "/docs" });
 
   app.setErrorHandler((error, _request, reply) => {
@@ -91,5 +92,6 @@ export async function buildApp(): Promise<FastifyInstance> {
   app.get("/v1/audit", { preHandler: authenticate }, async request => { const a=requireCapability(request,"iam.audit.read");const query=z.object({cursor:z.string().datetime().optional(),limit:z.coerce.number().int().min(1).max(100).default(50)}).parse(request.query);return rows(sql`select ae.id,ae.action,ae.capability,ae.resource_type "resourceType",ae.resource_id "resourceId",ae.outcome,ae.changes,ae.occurred_at "occurredAt",p.first_name || coalesce(' '||p.last_name,'') "actorName" from system.audit_events ae left join iam.user_accounts ua on ua.id=ae.actor_account_id left join iam.persons p on p.id=ua.person_id where ae.business_id=${a.businessId} ${query.cursor?sql`and ae.occurred_at<${query.cursor}`:sql``} order by ae.occurred_at desc limit ${query.limit}`); });
 
   await registerCatalogRoutes(app);
+  await registerProfessionalRoutes(app);
   return app;
 }

@@ -25,7 +25,7 @@ pnpm db:reset       # guarded: local port 55322 and project youngkingz-h01 only
 pnpm supabase:stop
 ```
 
-`supabase/migrations/*.sql` is the only migration history. `pnpm db:reset` destroys only the verified local YoungKingZ database and reapplies that history.
+`supabase/migrations/*.sql` is the only migration history. `pnpm db:reset` destroys only the verified local YoungKingZ database, reapplies that history and then loads the development/manual-QA seed documented in [`docs/LOCAL_QA_SEED.md`](../LOCAL_QA_SEED.md). That seed is not part of provisioning or production bootstrap.
 
 ## Provision and bootstrap
 

@@ -58,6 +58,7 @@ export async function cleanupContext(ctx: H01Ctx) {
   await db.begin(async tx => {
     await tx`delete from system.audit_events where business_id=${businessId}`;
     await tx`delete from system.operation_attempts where business_id=${businessId}`;
+    await tx`delete from team.professional_profiles where business_id=${businessId}`;
     await tx`delete from iam.access_sessions where business_id=${businessId} or account_id = any(${allAids.length?allAids:[null]}) or staff_member_id = any(${staffIds.length?staffIds:[null]})`;
     await tx`delete from iam.user_context_preferences where business_id=${businessId}`;
     await tx`delete from iam.capability_grants where business_id=${businessId}`;

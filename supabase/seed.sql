@@ -1,1 +1,5 @@
--- H01 intentionally has no synthetic business seed. Use `pnpm provision` and the restricted bootstrap CLI.
+-- Intentionally empty.
+--
+-- Product provisioning continues through `pnpm provision` and the restricted
+-- bootstrap CLI. Local manual-QA data lives in `seeds/local-qa.sql` and is only
+-- applied by the guarded `pnpm db:reset` wrapper.

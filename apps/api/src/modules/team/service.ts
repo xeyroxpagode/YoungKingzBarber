@@ -63,9 +63,11 @@ export async function createStaff(actor: Actor, raw: unknown, id: string) {
 export async function updateStaff(actor: Actor, staffId: string, raw: unknown, operation: string) {
   const input = updateStaffSchema.parse(raw);
   return executeOperation({operationId:operation,command:"staff.update",actor,payload:{staffId,...input}},async(tx)=>{
-    const updated=await tx`update iam.persons p set first_name=coalesce(${input.firstName ?? null},p.first_name),last_name=case when ${input.lastName === undefined} then p.last_name else ${input.lastName ?? null} end,phone=case when ${input.phone === undefined} then p.phone else ${input.phone ?? null} end,updated_at=now() from team.staff_members sm where sm.person_id=p.id and sm.id=${staffId} and sm.business_id=${actor.businessId} and sm.revision=${input.revision} returning p.id`;
-    if(!updated.length) throw new DomainError("STALE_REVISION","Staff revision is stale",409);
-    const [member]=await tx`update team.staff_members set revision=revision+1,updated_at=now() where id=${staffId} and business_id=${actor.businessId} and revision=${input.revision} returning id,revision`;
+    const [staff]=await tx`select id,person_id,revision from team.staff_members where id=${staffId} and business_id=${actor.businessId} for update`;
+    if(!staff) throw new DomainError("NOT_FOUND","Staff member not found",404);
+    if(Number(staff.revision)!==input.revision) throw new DomainError("STALE_REVISION","Staff revision is stale",409);
+    await tx`update iam.persons set first_name=coalesce(${input.firstName ?? null},first_name),last_name=case when ${input.lastName === undefined} then last_name else ${input.lastName ?? null} end,phone=case when ${input.phone === undefined} then phone else ${input.phone ?? null} end,updated_at=now() where id=${staff.person_id}`;
+    const [member]=await tx`update team.staff_members set revision=revision+1,updated_at=now() where id=${staffId} returning id,revision`;
     await audit(tx,{actor,operationId:operation,action:"staff.updated",capability:"iam.staff.update",resourceType:"STAFF_MEMBER",resourceId:staffId,changes:{fields:Object.keys(input).filter(k=>k!=="revision")}});
     return member!;
   });
@@ -109,5 +111,12 @@ export async function lifecycle(actor:Actor,staffId:string,action:LifecycleActio
     if(action==="offboard")await tx`update team.staff_relationship_periods set ended_at=now(),ended_reason=${input.reason} where staff_member_id=${staffId} and ended_at is null`;
     if(action==="reonboard"){await tx`insert into team.staff_relationship_periods(business_id,staff_member_id) values (${actor.businessId},${staffId})`;await tx`update iam.role_assignments set revoked_at=coalesce(revoked_at,now()),revoked_by_account_id=${actor.accountId} where staff_member_id=${staffId} and revoked_at is null`;}
     await tx`update team.staff_members set access_status=${access},employment_status=${employment},revision=revision+1,updated_at=now() where id=${staffId}`;
+    if(action==="offboard"){
+      const [profile]=await tx`select id,status::text status,revision from team.professional_profiles where business_id=${actor.businessId} and staff_member_id=${staffId} for update`;
+      if(profile?.status==="ACTIVE"){
+        await tx`update team.professional_profiles set status='INACTIVE',revision=revision+1,updated_at=now() where id=${profile.id}`;
+        await audit(tx,{actor,operationId:operation,action:"professionals.profile.deactivated",capability:"iam.access.offboard",resourceType:"PROFESSIONAL_PROFILE",resourceId:profile.id,changes:{cause:"STAFF_OFFBOARDED",status:{from:"ACTIVE",to:"INACTIVE"},revision:{from:Number(profile.revision),to:Number(profile.revision)+1}}});
+      }
+    }
     if(action!=="reactivate")await tx`update iam.access_sessions set revoked_at=now(),revoked_reason=${`ACCESS_${action.toUpperCase()}`} where staff_member_id=${staffId} and revoked_at is null`;
     await audit(tx,{actor,operationId:operation,action:`access.${action}`,capability:`iam.access.${action}`,resourceType:"STAFF_MEMBER",resourceId:staffId,changes:{reason:input.reason,access,employment}});return {staffId,accessStatus:access,employmentStatus:employment,revision:input.revision+1};});}

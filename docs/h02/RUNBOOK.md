@@ -24,3 +24,5 @@ pnpm db:reset
 ```
 
 `pnpm db:reset` is deliberately guarded by `scripts/assert-local-supabase.ps1` and refuses a database other than the YoungKingZ local PostgreSQL port 55322.
+
+The reset also recreates the exclusively local manual-QA accounts and fixtures documented in [`docs/LOCAL_QA_SEED.md`](../LOCAL_QA_SEED.md).
