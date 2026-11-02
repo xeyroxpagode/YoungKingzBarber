@@ -1,6 +1,7 @@
 import { bigint, boolean, jsonb, pgSchema, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
 export * from "./catalog.js";
 export * from "./professionals.js";
+export * from "./schedules.js";
 
 export const businessSchema = pgSchema("business");
 export const iamSchema = pgSchema("iam");
