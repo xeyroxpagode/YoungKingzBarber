@@ -2,6 +2,7 @@ import { z } from "zod";
 export * from "@youngkingz/contracts/catalog";
 export * from "@youngkingz/contracts/professionals";
 export * from "@youngkingz/contracts/schedules";
+export * from "@youngkingz/contracts/staff-services";
 
 export const roles = ["OWNER", "RECEPTIONIST", "BARBER"] as const;
 export const roleSchema = z.enum(roles);
@@ -22,7 +23,8 @@ export const capabilities = [
   "catalog.categories.manage",
   "professionals.read", "professionals.create", "professionals.update",
   "professionals.lifecycle", "professionals.self.read", "professionals.self.update",
-  "schedules.read", "schedules.manage", "schedules.self.read"
+  "schedules.read", "schedules.manage", "schedules.self.read",
+  "staff-services.read", "staff-services.manage", "staff-services.self.read"
 ] as const;
 export const capabilitySchema = z.enum(capabilities);
 export type Capability = z.infer<typeof capabilitySchema>;
@@ -56,11 +58,11 @@ export const contextSwitchSchema = z.object({ roleAssignmentId: z.string().uuid(
 export const lifecycleSchema = z.object({ revision: z.number().int().positive(), reason: z.string().trim().min(3).max(500) });
 export const terminateSessionsSchema = z.object({ scope: z.enum(["CURRENT", "OTHERS", "ALL"]), sessionId: z.string().uuid().optional() });
 
-export type DomainErrorCode = "UNAUTHENTICATED" | "FORBIDDEN" | "NOT_FOUND" | "VALIDATION_ERROR" | "CONFLICT" | "STALE_REVISION" | "LAST_OWNER_PROTECTED" | "SESSION_REVOKED" | "ACCESS_RESTRICTED" | "INVITATION_INVALID" | "INVITATION_EXPIRED" | "IDEMPOTENCY_CONFLICT" | "EXTERNAL_OUTCOME_UNKNOWN" | "SERVICE_NOT_PUBLISHABLE" | "SERVICE_ARCHIVED" | "CATEGORY_UNAVAILABLE" | "CATEGORY_IN_USE" | "CATEGORY_ARCHIVED" | "PROFESSIONAL_PROFILE_EXISTS" | "PROFESSIONAL_STAFF_NOT_ACTIVE" | "SCHEDULE_STAFF_NOT_EDITABLE";
+export type DomainErrorCode = "UNAUTHENTICATED" | "FORBIDDEN" | "NOT_FOUND" | "VALIDATION_ERROR" | "CONFLICT" | "STALE_REVISION" | "LAST_OWNER_PROTECTED" | "SESSION_REVOKED" | "ACCESS_RESTRICTED" | "INVITATION_INVALID" | "INVITATION_EXPIRED" | "IDEMPOTENCY_CONFLICT" | "EXTERNAL_OUTCOME_UNKNOWN" | "SERVICE_NOT_PUBLISHABLE" | "SERVICE_ARCHIVED" | "CATEGORY_UNAVAILABLE" | "CATEGORY_IN_USE" | "CATEGORY_ARCHIVED" | "PROFESSIONAL_PROFILE_EXISTS" | "PROFESSIONAL_STAFF_NOT_ACTIVE" | "SCHEDULE_STAFF_NOT_EDITABLE" | "STAFF_SERVICES_STAFF_NOT_EDITABLE";
 export class DomainError extends Error { constructor(public readonly code: DomainErrorCode, message: string, public readonly statusCode = 400, public readonly details?: unknown) { super(message); } }
 
 export const roleCapabilities: Readonly<Record<RoleCode, readonly Capability[]>> = {
   OWNER: capabilities.filter((capability) => capability !== "iam.security.recover"),
-  RECEPTIONIST: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "catalog.read", "professionals.read", "professionals.self.read", "professionals.self.update", "schedules.read", "schedules.self.read"],
-  BARBER: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "professionals.self.read", "professionals.self.update", "schedules.self.read"]
+  RECEPTIONIST: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "catalog.read", "professionals.read", "professionals.self.read", "professionals.self.update", "schedules.read", "schedules.self.read", "staff-services.read", "staff-services.self.read"],
+  BARBER: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "professionals.self.read", "professionals.self.update", "schedules.self.read", "staff-services.self.read"]
 };

@@ -414,4 +414,26 @@ insert into team.staff_schedule_intervals (business_id, weekly_schedule_id, week
   ('10000000-0000-4000-8000-000000000001','d0000000-0000-4000-8000-000000000003',5,720,1200),
   ('10000000-0000-4000-8000-000000000001','d0000000-0000-4000-8000-000000000003',6,720,1200);
 
+-- U04: additional services for staff-service assignment fixtures.
+-- Corte clǭsico: ACTIVE + PUBLISHED (already exists above).
+-- Fade: ACTIVE + UNPUBLISHED (assignable, not published).
+-- Barba: ARCHIVED (already assigned to Barber to test preserve/remove).
+insert into catalog.services (id, business_id, name, description, category_id, lifecycle, publication, archived_at) values
+  ('b0000000-0000-4000-8000-000000000002', '10000000-0000-4000-8000-000000000001', 'Fade', 'Servicio activo sin publicar.', 'a0000000-0000-4000-8000-000000000001', 'ACTIVE', 'UNPUBLISHED', null),
+  ('b0000000-0000-4000-8000-000000000003', '10000000-0000-4000-8000-000000000001', 'Barba', 'Servicio archivado ya asignado a un integrante.', 'a0000000-0000-4000-8000-000000000001', 'ARCHIVED', 'UNPUBLISHED', now());
+
+-- U04: staff service sets and assignments (role != professional capability).
+-- Owner, Receptionist and Barber each have at least one assigned service.
+-- Barber deliberately has NO ProfessionalProfile but still has assignments.
+insert into team.staff_service_sets (id, business_id, staff_member_id, revision) values
+  ('e0000000-0000-4000-8000-000000000001', '10000000-0000-4000-8000-000000000001', '50000000-0000-4000-8000-000000000001', 1),
+  ('e0000000-0000-4000-8000-000000000002', '10000000-0000-4000-8000-000000000001', '50000000-0000-4000-8000-000000000002', 1),
+  ('e0000000-0000-4000-8000-000000000003', '10000000-0000-4000-8000-000000000001', '50000000-0000-4000-8000-000000000003', 1);
+
+insert into team.staff_service_assignments (id, business_id, staff_service_set_id, service_id) values
+  ('f0000000-0000-4000-8000-000000000001', '10000000-0000-4000-8000-000000000001', 'e0000000-0000-4000-8000-000000000001', 'b0000000-0000-4000-8000-000000000001'),
+  ('f0000000-0000-4000-8000-000000000002', '10000000-0000-4000-8000-000000000001', 'e0000000-0000-4000-8000-000000000002', 'b0000000-0000-4000-8000-000000000001'),
+  ('f0000000-0000-4000-8000-000000000003', '10000000-0000-4000-8000-000000000001', 'e0000000-0000-4000-8000-000000000003', 'b0000000-0000-4000-8000-000000000001'),
+  ('f0000000-0000-4000-8000-000000000004', '10000000-0000-4000-8000-000000000001', 'e0000000-0000-4000-8000-000000000003', 'b0000000-0000-4000-8000-000000000003');
+
 commit;

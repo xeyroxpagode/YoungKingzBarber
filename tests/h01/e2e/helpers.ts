@@ -67,6 +67,7 @@ export async function cleanupContext(ctx: H01Ctx) {
     await tx`delete from iam.staff_role_states where business_id=${businessId}`;
     await tx`delete from team.staff_relationship_periods where business_id=${businessId}`;
     await tx`delete from team.staff_members where business_id=${businessId}`;
+    if (allAids.length) await tx`delete from system.operation_attempts where actor_account_id = any(${allAids})`;
     if (allAids.length) await tx`delete from iam.account_security_states where account_id = any(${allAids})`;
     if (allAids.length) await tx`delete from iam.user_accounts where id = any(${allAids})`;
     if (allPids.length) await tx`delete from iam.persons where id = any(${allPids})`;

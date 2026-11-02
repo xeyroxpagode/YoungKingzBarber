@@ -2,6 +2,7 @@ import { bigint, boolean, jsonb, pgSchema, text, timestamp, uniqueIndex, uuid } 
 export * from "./catalog.js";
 export * from "./professionals.js";
 export * from "./schedules.js";
+export * from "./staff-services.js";
 
 export const businessSchema = pgSchema("business");
 export const iamSchema = pgSchema("iam");
