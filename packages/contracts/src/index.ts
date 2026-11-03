@@ -1,5 +1,6 @@
 import { z } from "zod";
 export * from "@youngkingz/contracts/catalog";
+export * from "@youngkingz/contracts/clients";
 export * from "@youngkingz/contracts/professionals";
 export * from "@youngkingz/contracts/schedules";
 export * from "@youngkingz/contracts/staff-services";
@@ -24,7 +25,8 @@ export const capabilities = [
   "professionals.read", "professionals.create", "professionals.update",
   "professionals.lifecycle", "professionals.self.read", "professionals.self.update",
   "schedules.read", "schedules.manage", "schedules.self.read",
-  "staff-services.read", "staff-services.manage", "staff-services.self.read"
+  "staff-services.read", "staff-services.manage", "staff-services.self.read",
+  "clients.read", "clients.manage", "clients.notes.read", "clients.notes.manage", "clients.links.read", "clients.links.manage"
 ] as const;
 export const capabilitySchema = z.enum(capabilities);
 export type Capability = z.infer<typeof capabilitySchema>;
@@ -63,6 +65,6 @@ export class DomainError extends Error { constructor(public readonly code: Domai
 
 export const roleCapabilities: Readonly<Record<RoleCode, readonly Capability[]>> = {
   OWNER: capabilities.filter((capability) => capability !== "iam.security.recover"),
-  RECEPTIONIST: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "catalog.read", "professionals.read", "professionals.self.read", "professionals.self.update", "schedules.read", "schedules.self.read", "staff-services.read", "staff-services.self.read"],
+  RECEPTIONIST: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "catalog.read", "professionals.read", "professionals.self.read", "professionals.self.update", "schedules.read", "schedules.self.read", "staff-services.read", "staff-services.self.read", "clients.read", "clients.manage", "clients.notes.read", "clients.notes.manage", "clients.links.read"],
   BARBER: ["iam.self.read", "iam.self.update", "iam.sessions.read", "iam.sessions.terminate", "iam.contexts.list", "iam.contexts.switch", "professionals.self.read", "professionals.self.update", "schedules.self.read", "staff-services.self.read"]
 };

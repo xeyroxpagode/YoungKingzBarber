@@ -9,10 +9,16 @@ export type Tx = TransactionSql<Record<string, never>>;
 export async function executeOperation<T>(input: { operationId: string; command: string; actor: Actor; payload: unknown }, handler: (tx: Tx) => Promise<T>): Promise<{ data: T; replayed: boolean }> {
   const requestHash = stableHash({ command: input.command, payload: input.payload });
   const result = await database.client.begin(async (tx) => {
-    const existing = await tx`select request_hash, status::text status, response_body from system.operation_attempts where operation_id = ${input.operationId} for update`;
+    const existing = await tx`select request_hash, status::text status, response_body, business_id, actor_account_id from system.operation_attempts where operation_id = ${input.operationId} for update`;
     if (existing.length) {
-      if (existing[0]!.request_hash !== requestHash) throw new DomainError("IDEMPOTENCY_CONFLICT", "operation_id was already used with different content", 409);
-      if (existing[0]!.status === "SUCCEEDED") return { ok: true as const, data: existing[0]!.response_body as T, replayed: true };
+      const row = existing[0]!;
+      // Replay restringido al actor y Business origen (U01 hardening: una identidad
+      // de operación conocida no debe devolver resultados de otro actor/Business).
+      if (row.business_id !== input.actor.businessId || row.actor_account_id !== input.actor.accountId) {
+        throw new DomainError("IDEMPOTENCY_CONFLICT", "operation_id already used by another actor or business", 409);
+      }
+      if (row.request_hash !== requestHash) throw new DomainError("IDEMPOTENCY_CONFLICT", "operation_id was already used with different content", 409);
+      if (row.status === "SUCCEEDED") return { ok: true as const, data: existing[0]!.response_body as T, replayed: true };
       throw new DomainError("CONFLICT", "The operation is already being reconciled", 409);
     }
     await tx`insert into system.operation_attempts(operation_id,business_id,actor_account_id,command_name,request_hash) values (${input.operationId},${input.actor.businessId},${input.actor.accountId},${input.command},${requestHash})`;

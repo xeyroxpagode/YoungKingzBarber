@@ -15,6 +15,7 @@ import { registerCatalogRoutes } from "./modules/catalog/routes.js";
 import { registerProfessionalRoutes } from "./modules/professionals/routes.js";
 import { registerScheduleRoutes } from "./modules/schedules/routes.js";
 import { registerStaffServicesRoutes } from "./modules/staff-services/routes.js";
+import { registerClientsRoutes } from "./modules/clients/routes.js";
 import "./plugins/auth.js";
 
 const uuidParam = z.object({ id: z.string().uuid() });
@@ -23,7 +24,7 @@ const operationParam = z.object({ operationId: z.string().uuid() });
 export async function buildApp(): Promise<FastifyInstance> {
   const app = Fastify({ logger: { redact: ["req.headers.authorization", "req.headers.cookie", "body.token", "body.password"] }, trustProxy: true });
   await app.register(cors, { origin: runtime.webOrigin, credentials: true, methods: ["GET","HEAD","POST","PATCH","PUT","OPTIONS"], allowedHeaders: ["authorization","content-type","x-operation-id"] });
-  await app.register(swagger, { openapi: { info: { title: "YoungKingZ API", version: "2.2.1", description: "Authoritative IAM, Staff, Catalog, Professional Profiles, and Weekly Schedules API" }, servers: [{ url: "http://127.0.0.1:4100" }], tags: [{name:"system"},{name:"iam"},{name:"team"},{name:"catalog"},{name:"professionals"},{name:"schedules"},{name:"staff-services"}] } });
+  await app.register(swagger, { openapi: { info: { title: "YoungKingZ API", version: "2.2.1", description: "Authoritative IAM, Staff, Catalog, Professional Profiles, and Weekly Schedules API" }, servers: [{ url: "http://127.0.0.1:4100" }], tags: [{name:"system"},{name:"iam"},{name:"team"},{name:"catalog"},{name:"professionals"},{name:"schedules"},{name:"staff-services"},{name:"clients"}] } });
   await app.register(swaggerUi, { routePrefix: "/docs" });
 
   app.setErrorHandler((error, _request, reply) => {
@@ -97,5 +98,6 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerProfessionalRoutes(app);
   await registerScheduleRoutes(app);
   await registerStaffServicesRoutes(app);
+  await registerClientsRoutes(app);
   return app;
 }
